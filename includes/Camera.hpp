@@ -2,10 +2,9 @@
 #define CAMERA_HPP
 
 #include "./Misc.hpp"
+#include "./Object.hpp"
 
-class Camera {
-    public:
-    Vec3 CameraVector;
+class Camera: public Object{
     
 };
 
