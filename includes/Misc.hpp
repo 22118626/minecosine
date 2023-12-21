@@ -2,14 +2,20 @@
 #define MISC_HPP
 
 
-class Vec3 {
+class Vertex {
     public:
-    float PositionX;
-    float PositionY;
-    float PositionZ;
-    float RotationX;
-    float RotationY;
-    float RotationZ;
+    Vertex();
+    float X;
+    float Y;
+    float Z;
+};
+
+class Vec3 : public Vertex{
+    public:
+    Vec3(float PositionX, float PositionY, float PositionZ, float yaw, float pitch, float roll);
+    float yaw;
+    float pitch;
+    float roll;
     void NormalizeVector();
     Vec3 XAxis();
     Vec3 YAxis();
